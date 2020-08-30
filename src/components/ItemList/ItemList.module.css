@@ -1,0 +1,15 @@
+.itemList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Oswald, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  list-style-type: none;
+}
+
+.itemList__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

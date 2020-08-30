@@ -1,0 +1,39 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Oswald, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+@media (max-width: 1080px) {
+  .input {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .button {
+    width: 30%;
+  }
+}
+
+@media (max-width: 760px) {
+  .title {
+    font-size: 25px;
+  }
+  .input {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .button {
+    width: 30%;
+  }
+}

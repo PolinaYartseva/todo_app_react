@@ -1,0 +1,13 @@
+.title {
+  font-family: Oswald, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .title {
+    font-size: 25px;
+  }
+}
