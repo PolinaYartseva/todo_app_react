@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/PolinaYartseva/todo_app_react.git/static/css/main.5ae4cb9a.chunk.css",
-    "main.js": "/PolinaYartseva/todo_app_react.git/static/js/main.b3b7dc53.chunk.js",
-    "main.js.map": "/PolinaYartseva/todo_app_react.git/static/js/main.b3b7dc53.chunk.js.map",
-    "runtime-main.js": "/PolinaYartseva/todo_app_react.git/static/js/runtime-main.febf809c.js",
-    "runtime-main.js.map": "/PolinaYartseva/todo_app_react.git/static/js/runtime-main.febf809c.js.map",
-    "static/js/2.18d93787.chunk.js": "/PolinaYartseva/todo_app_react.git/static/js/2.18d93787.chunk.js",
-    "static/js/2.18d93787.chunk.js.map": "/PolinaYartseva/todo_app_react.git/static/js/2.18d93787.chunk.js.map",
-    "index.html": "/PolinaYartseva/todo_app_react.git/index.html",
-    "precache-manifest.d0138d664c77b07c53321bed1f8ef361.js": "/PolinaYartseva/todo_app_react.git/precache-manifest.d0138d664c77b07c53321bed1f8ef361.js",
-    "service-worker.js": "/PolinaYartseva/todo_app_react.git/service-worker.js",
-    "static/css/main.5ae4cb9a.chunk.css.map": "/PolinaYartseva/todo_app_react.git/static/css/main.5ae4cb9a.chunk.css.map",
-    "static/js/2.18d93787.chunk.js.LICENSE.txt": "/PolinaYartseva/todo_app_react.git/static/js/2.18d93787.chunk.js.LICENSE.txt",
-    "static/media/fonts.css": "/PolinaYartseva/todo_app_react.git/static/media/Oswald-Light.c9ba4b0f.woff",
-    "static/media/background5.jpg": "/PolinaYartseva/todo_app_react.git/static/media/background5.1963a6ca.jpg"
+    "main.css": "/todo_app_react/static/css/main.454d11a1.chunk.css",
+    "main.js": "/todo_app_react/static/js/main.b3b7dc53.chunk.js",
+    "main.js.map": "/todo_app_react/static/js/main.b3b7dc53.chunk.js.map",
+    "runtime-main.js": "/todo_app_react/static/js/runtime-main.af2ac6f1.js",
+    "runtime-main.js.map": "/todo_app_react/static/js/runtime-main.af2ac6f1.js.map",
+    "static/js/2.18d93787.chunk.js": "/todo_app_react/static/js/2.18d93787.chunk.js",
+    "static/js/2.18d93787.chunk.js.map": "/todo_app_react/static/js/2.18d93787.chunk.js.map",
+    "index.html": "/todo_app_react/index.html",
+    "precache-manifest.ee67d78bbf356f7cdce3809ea5e23b20.js": "/todo_app_react/precache-manifest.ee67d78bbf356f7cdce3809ea5e23b20.js",
+    "service-worker.js": "/todo_app_react/service-worker.js",
+    "static/css/main.454d11a1.chunk.css.map": "/todo_app_react/static/css/main.454d11a1.chunk.css.map",
+    "static/js/2.18d93787.chunk.js.LICENSE.txt": "/todo_app_react/static/js/2.18d93787.chunk.js.LICENSE.txt",
+    "static/media/fonts.css": "/todo_app_react/static/media/Oswald-Light.c9ba4b0f.woff",
+    "static/media/background5.jpg": "/todo_app_react/static/media/background5.1963a6ca.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.febf809c.js",
+    "static/js/runtime-main.af2ac6f1.js",
     "static/js/2.18d93787.chunk.js",
-    "static/css/main.5ae4cb9a.chunk.css",
+    "static/css/main.454d11a1.chunk.css",
     "static/js/main.b3b7dc53.chunk.js"
   ]
 }
