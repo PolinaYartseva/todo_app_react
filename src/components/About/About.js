@@ -18,17 +18,17 @@ class About extends React.Component {
         octokit.repos.listForUser({
             username: 'PolinaYartseva'
         }).then(({ data }) => {
-                this.setState({
-                    repoList: data,
-                    isLoading: false
-                });
-            }).catch(error => {
-                this.setState({
-                    isLoading: false,
-                    isError: true,
-                    errorMessage: error
-                });
+            this.setState({
+                repoList: data,
+                isLoading: false
             });
+        }).catch(error => {
+            this.setState({
+                isLoading: false,
+                isError: true,
+                errorMessage: error
+            });
+        });
         octokit.users.getByUsername({
             username: "PolinaYartseva"
         }).then(({ data }) => {
@@ -37,20 +37,27 @@ class About extends React.Component {
                 isLoading: false
             });
         }).catch(error => {
-                this.setState({
-                    isLoading: false,
-                    isError: true,
-                    errorMessage: error
-                });
+            this.setState({
+                isLoading: false,
+                isError: true,
+                errorMessage: error
             });
-        };
+        });
+    };
 
     render() {
-        const { isLoading, repoList, user } = this.state;
+        const { isLoading, repoList, user, isError, errorMessage } = this.state;
         return (<div className={styles.wrap}>
-            {isLoading ? <CircularProgress className={styles.preloader}/> :
+            {isError ?
+                <div className={styles.error}>
+                    <h2>Упс... произошла ошибка</h2>
+                    <span className={styles.error_text}>{ errorMessage.message}</span>
+                    <span className={styles.error_num}>{ errorMessage.status}</span>
+                </div>
+                : <>
+                    {isLoading ? <CircularProgress className={styles.preloader}/> :
 
-                    <h1 className={styles.title}>about me</h1>}
+                        <h1 className={styles.title}>about me</h1>}
                     <div className={styles.content}>
                         <div className={styles.content_photo}>
                             <img src={user.avatar_url} alt='User' className={styles.user_avatar} />
@@ -67,12 +74,13 @@ class About extends React.Component {
                         <p className={styles.repo_list}>My repositories:</p>
                         <div className={styles.repo_links}>
                             {repoList.map(repo => (<div className={styles.repo_item} key={repo.name}>
-                                <a href={repo.name} className={styles.repo_name}>{repo.name}</a>
-                                <p className={styles.repo_name}>{repo.description}</p>
-                            </div>
+                                    <a href={repo.name} className={styles.repo_name}>{repo.name}</a>
+                                    <p className={styles.repo_name}>{repo.description}</p>
+                                </div>
                             ))}
                         </div>
                     </div>
+                </>}
         </div>)
     }
 }

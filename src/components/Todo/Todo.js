@@ -27,7 +27,7 @@ const Todo = () => {
         const newItemList = items.map(item => {
             const newItem = { ...item };
             if (item.id === id) {
-                newItem.isDone = !item.isDone;
+                newItem.isDone = !newItem.isDone;
                 if (newItem.isDone){
                     setCount(count -1)
                 } else {
@@ -55,11 +55,11 @@ const Todo = () => {
     };
 
     const onClickDelete = (id, done) => {
-    const newItemList = items.filter(item => item.id !== id);
-    if(done === false){
-        setCount(count -1)
-    }
-    setItems(newItemList);
+        const newItemList = items.filter(item => item.id !== id);
+        if(done === false){
+            setCount(count -1)
+        }
+        setItems(newItemList);
     };
 
     const filterItems = () => {
@@ -86,7 +86,7 @@ const Todo = () => {
                       filter={filter}
                       filterItems={filterItems}
                       changeFilter={changeFilter} />
-            <Footer count={items.length}
+            <Footer count={count}
                     filter={filter}
                     changeFilter={changeFilter}
                     filterItems={filterItems} />
