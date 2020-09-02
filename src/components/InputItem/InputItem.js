@@ -35,7 +35,7 @@ class InputItem extends React.Component {
 
         return (<div className={styles.input}>
                 <TextField
-                    label="Введите название дела"
+                    label="Insert your todo"
                     id="margin-normal"
                     margin="normal"
                     fullWidth
