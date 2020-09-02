@@ -8,10 +8,10 @@ import styles from './Todo.module.css';
 
 const Todo = () => {
     const initialState = {
-        newItemList: JSON.parse(localStorage.getItem("todoItems")) || [],
+        items: JSON.parse(localStorage.getItem("items")) || [],
         filter: 'all',
         count: JSON.parse(localStorage.getItem("count")) || 0,
-        items: []
+        item: ""
     };
 
     const [items, setItems] = useState(initialState.items);
@@ -20,8 +20,7 @@ const Todo = () => {
 
     useEffect(() => {
         localStorage.setItem("items", JSON.stringify(items));
-        localStorage.setItem("count", JSON.stringify(count));
-    }, [items,count]);
+    }, [items]);
 
     const onClickDone = id => {
         const newItemList = items.map(item => {
@@ -75,6 +74,20 @@ const Todo = () => {
         setFilter(name)
     };
 
+    const clearCompleted = () => {
+        const newItemList = items.filter(item => !item.isDone)
+        setItems(newItemList);
+    }
+
+    const clearAll = () => {
+        setItems([]);
+        setCount(0);
+    };
+
+    useEffect(() => {
+        localStorage.setItem("count", JSON.stringify(count));
+    }, [count]);
+
     return (
         <div>
             <h1 className={styles.title}>todo list</h1>
@@ -89,7 +102,9 @@ const Todo = () => {
             <Footer count={count}
                     filter={filter}
                     changeFilter={changeFilter}
-                    filterItems={filterItems} />
+                    filterItems={filterItems}
+                    clearCompleted={clearCompleted}
+                    clearAll={clearAll} />
         </div>
     );
 };
